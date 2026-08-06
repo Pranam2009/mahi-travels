@@ -1,0 +1,6 @@
+{
+  "name": "Mahi Travels Mangalore",
+  "description": "Independent luxury travel & taxi service in Mangalore for airport transfers, outstation trips, temple visits, and custom travel packages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
