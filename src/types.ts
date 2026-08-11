@@ -37,15 +37,15 @@ export const BUSINESS_INFO: BusinessContact = {
   tagline: "Travel Comfortably, Travel Safely with Mahi Travels",
   ownerTitle: "Independent Luxury Travel Partner",
   address: {
-    street: "Near Katipalla Sabha Bhavana",
+    street: "Near Sabha Bhavana",
     area: "Katipalla",
     city: "Mangalore",
     pincode: "575030",
-    full: "Near Katipalla Sabha Bhavana, Katipalla, Mangalore, Karnataka 575030"
+    full: "Near Sabha Bhavana, Katipalla, Mangalore, Karnataka 575030"
   },
   phones: ["7892102346", "8050307382"],
   primaryWhatsApp: "7892102346",
   instagramUrl: "https://www.instagram.com/mahitravelsmangalore",
   facebookUrl: "https://www.facebook.com/share/1F1gqcwbbV/",
-  googleMapsDirectionsUrl: "https://www.google.com/maps/search/?api=1&query=Near+Katipalla+Sabha+Bhavana+Katipalla+Mangalore+Karnataka+575030"
+  googleMapsDirectionsUrl: "https://maps.app.goo.gl/G6s61cVxuwZsQ9dH8"
 };

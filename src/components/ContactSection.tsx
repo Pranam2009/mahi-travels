@@ -293,11 +293,11 @@ Passengers: ${formState.passengers}`;
               </form>
             </div>
 
-            {/* Embedded Google Map (Katipalla, Mangalore) */}
+            {/* Embedded Google Map (MAHI TRAVELS, Katipalla, Mangalore) */}
             <div className="rounded-3xl overflow-hidden glass-card border border-slate-800 h-56 sm:h-80 relative shadow-2xl">
               <iframe
-                title="Mahi Travels Mangalore Location Map"
-                src="https://maps.google.com/maps?q=Near+Katipalla+Sabha+Bhavana,+Katipalla,+Mangalore,+Karnataka+575030&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                title="MAHI TRAVELS Location Map"
+                src="https://maps.google.com/maps?q=12.9926571,74.8338357+(MAHI+TRAVELS)&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: 'grayscale(0.3) contrast(1.1) invert(0.9) hue-rotate(180deg)' }}
@@ -307,7 +307,7 @@ Passengers: ${formState.passengers}`;
               />
               <div className="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-slate-700 text-xs text-slate-200 flex items-center gap-1.5 shadow-md">
                 <MapPin className="w-3.5 h-3.5 text-orange-400" />
-                <span>Katipalla, Mangalore – 575030</span>
+                <span>MAHI TRAVELS • Katipalla, Mangalore</span>
               </div>
             </div>
 

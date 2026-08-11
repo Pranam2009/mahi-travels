@@ -52,7 +52,7 @@ Sitemap: https://mahitravels.com/sitemap.xml`;
       "telephone": BUSINESS_INFO.phones,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Near Katipalla Sabha Bhavana, Katipalla",
+        "streetAddress": "Near Sabha Bhavana, Katipalla",
         "addressLocality": "Mangalore",
         "addressRegion": "Karnataka",
         "postalCode": "575030",
