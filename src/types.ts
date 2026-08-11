@@ -37,15 +37,15 @@ export const BUSINESS_INFO: BusinessContact = {
   tagline: "Travel Comfortably, Travel Safely with Mahi Travels",
   ownerTitle: "Independent Luxury Travel Partner",
   address: {
-    street: "D Andakkeri Road",
-    area: "Yeyyady",
+    street: "Near Katipalla Sabha Bhavana",
+    area: "Katipalla",
     city: "Mangalore",
-    pincode: "575008",
-    full: "D Andakkeri Road, Yeyyady, Mangalore – 575008"
+    pincode: "575030",
+    full: "Near Katipalla Sabha Bhavana, Katipalla, Mangalore, Karnataka 575030"
   },
   phones: ["7892102346", "8050307382"],
   primaryWhatsApp: "7892102346",
   instagramUrl: "https://www.instagram.com/mahitravelsmangalore",
   facebookUrl: "https://www.facebook.com/share/1F1gqcwbbV/",
-  googleMapsDirectionsUrl: "https://www.google.com/maps/search/?api=1&query=D+Andakkeri+Road+Yeyyady+Mangalore+575008"
+  googleMapsDirectionsUrl: "https://www.google.com/maps/search/?api=1&query=Near+Katipalla+Sabha+Bhavana+Katipalla+Mangalore+Karnataka+575030"
 };

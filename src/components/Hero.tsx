@@ -47,17 +47,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal, onOpenIntro }) =
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Hero Column */}
-          <div className="lg:col-span-7 space-y-8 text-left">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-left">
             
             {/* Animated Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-900/90 border border-amber-500/40 text-amber-300 text-xs font-bold backdrop-blur-md shadow-xl"
+              className="inline-flex items-center gap-2.5 px-3.5 sm:px-4 py-2 rounded-full bg-slate-900/90 border border-amber-500/40 text-amber-300 text-xs font-bold backdrop-blur-md shadow-xl max-w-full"
             >
-              <ShieldCheck className="w-4 h-4 text-emerald-400 animate-pulse" />
-              <span>Trusted Independent Travel Service in Mangalore</span>
+              <ShieldCheck className="w-4 h-4 text-emerald-400 animate-pulse flex-shrink-0" />
+              <span className="truncate">Trusted Independent Travel Service in Mangalore</span>
             </motion.div>
 
             {/* Main Heading */}
@@ -65,7 +65,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal, onOpenIntro }) =
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] font-['Poppins']"
+              className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12] font-['Poppins']"
             >
               Travel Comfortably, <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-yellow-400 drop-shadow-sm">
@@ -79,7 +79,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal, onOpenIntro }) =
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-light"
+              className="text-sm sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-light"
             >
               Reliable Taxi & Travel Services from Mangalore for Airport Transfers, Local Taxi, Outstation Trips, Family Tours, Temple Visits, Business Travel, and Custom Travel Packages.
             </motion.p>
@@ -89,17 +89,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal, onOpenIntro }) =
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 max-w-xl text-xs font-medium text-slate-300"
+              className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2 max-w-xl text-xs font-medium text-slate-300"
             >
-              <motion.div whileHover={{ scale: 1.03 }} className="flex items-center gap-2 bg-slate-900/80 p-3 rounded-xl border border-slate-800 backdrop-blur-md shadow-md">
+              <motion.div whileHover={{ scale: 1.03 }} className="flex items-center gap-2 bg-slate-900/80 p-2.5 sm:p-3 rounded-xl border border-slate-800 backdrop-blur-md shadow-md">
                 <MapPin className="w-4 h-4 text-orange-400 flex-shrink-0" />
                 <span>Mangalore & Outstation</span>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.03 }} className="flex items-center gap-2 bg-slate-900/80 p-3 rounded-xl border border-slate-800 backdrop-blur-md shadow-md">
+              <motion.div whileHover={{ scale: 1.03 }} className="flex items-center gap-2 bg-slate-900/80 p-2.5 sm:p-3 rounded-xl border border-slate-800 backdrop-blur-md shadow-md">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0" />
                 <span>Safe Driving</span>
               </motion.div>
-              <motion.div whileHover={{ scale: 1.03 }} className="flex items-center gap-2 bg-slate-900/80 p-3 rounded-xl border border-slate-800 backdrop-blur-md shadow-md col-span-2 sm:col-span-1">
+              <motion.div whileHover={{ scale: 1.03 }} className="flex items-center gap-2 bg-slate-900/80 p-2.5 sm:p-3 rounded-xl border border-slate-800 backdrop-blur-md shadow-md col-span-2 sm:col-span-1">
                 <Star className="w-4 h-4 text-amber-400 flex-shrink-0 fill-current" />
                 <span>Punctual Pickups</span>
               </motion.div>
@@ -110,16 +110,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal, onOpenIntro }) =
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
-              className="flex flex-wrap items-center gap-4 pt-4"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-4"
             >
               {/* Watch Intro Button */}
               {onOpenIntro && (
                 <button
                   onClick={onOpenIntro}
-                  className="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-sm shadow-xl shadow-orange-500/30 transition-all hover:scale-105 active:scale-95 cursor-pointer group border border-amber-300/30"
+                  className="flex items-center justify-center gap-2.5 px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-orange-500/30 transition-all hover:scale-105 active:scale-95 cursor-pointer group border border-amber-300/30"
                 >
-                  <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Play className="w-3.5 h-3.5 text-white fill-current ml-0.5" />
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Play className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white fill-current ml-0.5" />
                   </div>
                   <span>Watch Full Screen Intro</span>
                 </button>
@@ -130,18 +130,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal, onOpenIntro }) =
                 href={getWhatsAppLink('Hi Mahi Travels, I would like to book a trip or inquire about taxi availability.')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-xl shadow-emerald-950/50 transition-all hover:scale-105 active:scale-95 group"
+                className="flex items-center justify-center gap-2.5 px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-xl shadow-emerald-950/50 transition-all hover:scale-105 active:scale-95 group"
               >
-                <MessageCircle className="w-5 h-5 text-white group-hover:rotate-12 transition-transform" />
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:rotate-12 transition-transform" />
                 <span>Book on WhatsApp</span>
               </a>
 
               {/* Call Now */}
               <a
                 href={getCallLink()}
-                className="flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-100 font-bold text-sm border border-slate-700/80 shadow-xl transition-all hover:scale-105 active:scale-95 group"
+                className="flex items-center justify-center gap-2.5 px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-100 font-bold text-xs sm:text-sm border border-slate-700/80 shadow-xl transition-all hover:scale-105 active:scale-95 group"
               >
-                <Phone className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400 group-hover:scale-110 transition-transform" />
                 <span>Call Now</span>
               </a>
             </motion.div>
@@ -151,9 +151,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal, onOpenIntro }) =
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="pt-6 flex flex-wrap items-center gap-4 text-xs text-slate-400 border-t border-slate-800/80 max-w-md"
+              className="pt-4 sm:pt-6 flex flex-wrap items-center gap-3 sm:gap-4 text-xs text-slate-400 border-t border-slate-800/80 max-w-md"
             >
-              <span>Based in Yeyyady, Mangalore</span>
+              <span>Based in Katipalla, Mangalore</span>
               <span className="h-3 w-[1px] bg-slate-700 hidden sm:inline" />
               <span>Direct Phone & WhatsApp Booking</span>
             </motion.div>

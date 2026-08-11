@@ -47,7 +47,7 @@ export const SERVICES_LIST: ServiceItem[] = [
     shortDescription: 'Professional, quiet, and punctual travel solutions for executive meetings, business clients, and official visits.',
     fullDescription: 'Impeccable executive transport for business delegates visiting IT parks, industrial zones, or hotel conferences in Mangalore.',
     iconName: 'Briefcase',
-    popularPlaces: ['Yeyyady IT Park', 'Special Economic Zone', 'Port Trust Area', 'Business Hotels']
+    popularPlaces: ['Mangalore IT Parks', 'Special Economic Zone', 'Port Trust Area', 'Business Hotels']
   },
   {
     id: 'weekend-getaways',

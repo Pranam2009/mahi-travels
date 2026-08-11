@@ -52,10 +52,10 @@ Sitemap: https://mahitravels.com/sitemap.xml`;
       "telephone": BUSINESS_INFO.phones,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "D Andakkeri Road, Yeyyady",
+        "streetAddress": "Near Katipalla Sabha Bhavana, Katipalla",
         "addressLocality": "Mangalore",
         "addressRegion": "Karnataka",
-        "postalCode": "575008",
+        "postalCode": "575030",
         "addressCountry": "IN"
       },
       "url": "https://mahitravels.com",
@@ -69,8 +69,8 @@ Sitemap: https://mahitravels.com/sitemap.xml`;
   );
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-2xl rounded-3xl glass-card bg-slate-900 border border-slate-700 p-6 sm:p-8 shadow-2xl space-y-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200 overflow-y-auto">
+      <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl sm:rounded-3xl glass-card bg-slate-900 border border-slate-700 p-5 sm:p-8 shadow-2xl space-y-6">
         
         <button
           onClick={onClose}

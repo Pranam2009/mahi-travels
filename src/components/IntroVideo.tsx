@@ -121,14 +121,25 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ isOpen, onClose }) => {
           transition={{ duration: 0.3 }}
           onMouseMove={handleMouseMove}
           onTouchStart={() => setShowControls(true)}
-          className="fixed inset-0 z-[100] bg-black w-screen h-screen h-[100dvh] overflow-hidden flex flex-col justify-between select-none"
+          className="fixed inset-0 z-[100] bg-black w-full h-full h-[100dvh] overflow-hidden flex flex-col justify-between select-none"
         >
-          {/* Full Screen Edge-to-Edge Video Element */}
-          <div className="absolute inset-0 w-full h-full bg-black flex items-center justify-center">
+          {/* Full Screen Edge-to-Edge Video Element with Ambient Blur for Mobile */}
+          <div className="absolute inset-0 w-full h-full bg-black flex items-center justify-center overflow-hidden">
+            {/* Ambient Blurred Video Background for Mobile Pillarboxing */}
+            <video
+              src="/intro.mp4"
+              className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none sm:hidden"
+              autoPlay
+              playsInline
+              muted
+              aria-hidden="true"
+            />
+
+            {/* Primary Responsive Video Container */}
             <video
               ref={videoRef}
               src="/intro.mp4"
-              className="w-full h-full object-cover md:object-cover cursor-pointer"
+              className="relative z-10 w-full h-full max-h-[100dvh] max-w-full object-contain sm:object-cover cursor-pointer"
               autoPlay
               playsInline
               muted={isMuted}
@@ -138,25 +149,25 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ isOpen, onClose }) => {
             />
 
             {/* Subtle Gradient Overlays for readability of controls */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/80 pointer-events-none" />
+            <div className="absolute inset-0 z-15 bg-gradient-to-b from-black/80 via-transparent to-black/90 pointer-events-none" />
           </div>
 
           {/* Top Bar Floating Controls */}
           <div
-            className={`relative z-20 w-full px-4 sm:px-8 py-4 sm:py-6 flex items-center justify-between transition-opacity duration-300 ${
+            className={`relative z-20 w-full px-3 sm:px-8 py-3 sm:py-6 flex items-center justify-between gap-2 transition-opacity duration-300 ${
               showControls || !isPlaying ? 'opacity-100' : 'opacity-0 pointer-events-none'
             }`}
           >
             {/* Brand Logo & Tag */}
-            <div className="flex items-center gap-3 bg-slate-900/80 border border-slate-700/70 backdrop-blur-md px-3.5 sm:px-4 py-2 rounded-full shadow-2xl">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-orange-500 to-amber-500 flex items-center justify-center text-white shadow-md">
-                <Sparkles className="w-4 h-4 animate-pulse text-amber-200" />
+            <div className="flex items-center gap-2 sm:gap-3 bg-slate-900/90 border border-slate-700/70 backdrop-blur-md px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-2xl">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-orange-500 to-amber-500 flex items-center justify-center text-white shadow-md flex-shrink-0">
+                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 animate-pulse text-amber-200" />
               </div>
-              <div>
-                <h4 className="text-xs sm:text-sm font-extrabold text-white tracking-wide uppercase font-['Poppins']">
+              <div className="leading-tight">
+                <h4 className="text-[11px] sm:text-sm font-extrabold text-white tracking-wide uppercase font-['Poppins']">
                   Mahi Travels
                 </h4>
-                <p className="text-[10px] sm:text-xs text-orange-400 font-semibold">Mangalore • Official Video</p>
+                <p className="text-[9px] sm:text-xs text-orange-400 font-semibold hidden xs:block">Mangalore • Official Video</p>
               </div>
             </div>
 

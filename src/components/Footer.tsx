@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSEOModal }) => {
     'Outstation Taxi Mangalore',
     'Mahi Travels',
     'Temple Visit Taxi Mangalore',
-    'Yeyyady Taxi Service'
+    'Katipalla Taxi Service'
   ];
 
   return (
@@ -143,7 +143,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSEOModal }) => {
         {/* Bottom Copyright */}
         <div className="pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-300 gap-3">
           <p>© {new Date().getFullYear()} Mahi Travels Mangalore. All Rights Reserved.</p>
-          <p className="text-[11px] text-slate-300">Personally Managed Travel & Taxi Services • Yeyyady, Mangalore</p>
+          <p className="text-[11px] text-slate-300">Personally Managed Travel & Taxi Services • Katipalla, Mangalore</p>
         </div>
 
       </div>

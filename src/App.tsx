@@ -32,7 +32,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0F172A] text-slate-100 flex flex-col selection:bg-[#F97316] selection:text-white font-['Poppins',sans-serif]">
+    <div className="min-h-screen bg-[#0F172A] text-slate-100 flex flex-col selection:bg-[#F97316] selection:text-white font-['Poppins',sans-serif] overflow-x-hidden max-w-full">
       
       {/* Intro Video Overlay */}
       <IntroVideo isOpen={introOpen} onClose={handleCloseIntro} />

@@ -53,9 +53,9 @@ export const Services: React.FC<ServicesProps> = ({ onOpenBookingModal }) => {
   });
 
   return (
-    <section id="services" className="py-24 bg-slate-900/90 relative overflow-hidden">
+    <section id="services" className="py-16 sm:py-24 bg-slate-900/90 relative overflow-hidden">
       {/* Background Lighting */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-orange-600/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] max-w-full h-[800px] bg-orange-600/10 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -65,13 +65,13 @@ export const Services: React.FC<ServicesProps> = ({ onOpenBookingModal }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto space-y-4 mb-12"
+          className="text-center max-w-3xl mx-auto space-y-4 mb-10 sm:mb-12"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-amber-400 text-xs font-semibold uppercase tracking-wider shadow-md">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Tailored Travel Offerings</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-['Poppins']">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-['Poppins']">
             Our Travel Services
           </h2>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-light">
@@ -85,13 +85,13 @@ export const Services: React.FC<ServicesProps> = ({ onOpenBookingModal }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-wrap items-center justify-center gap-2.5 mb-12"
+          className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-10 sm:mb-12"
         >
           {filterOptions.map((opt) => (
             <button
               key={opt.id}
               onClick={() => setActiveFilter(opt.id)}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer shadow-md ${
+              className={`px-3.5 sm:px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer shadow-md ${
                 activeFilter === opt.id
                   ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-orange-500/25 scale-105'
                   : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700/60'
@@ -115,7 +115,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenBookingModal }) => {
                 viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.5, delay: (index % 3) * 0.08 }}
                 whileHover={{ y: -8, scale: 1.01 }}
-                className="rounded-2xl glass-card p-6 border border-slate-800 hover:border-orange-500/50 hover:shadow-2xl hover:shadow-orange-950/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                className="rounded-2xl glass-card p-5 sm:p-6 border border-slate-800 hover:border-orange-500/50 hover:shadow-2xl hover:shadow-orange-950/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
               >
                 {/* Subtle Card Glow on Hover */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl group-hover:bg-orange-500/15 transition-colors pointer-events-none" />
@@ -134,7 +134,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenBookingModal }) => {
 
                   {/* Title & Short Description */}
                   <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-amber-300 transition-colors font-['Poppins']">
+                    <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-amber-300 transition-colors font-['Poppins']">
                       {service.title}
                     </h3>
                     <p className="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed font-light">
@@ -162,7 +162,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenBookingModal }) => {
                 </div>
 
                 {/* Bottom Card Action */}
-                <div className="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between gap-3 relative z-10">
+                <div className="pt-5 sm:pt-6 mt-5 sm:mt-6 border-t border-slate-800/80 flex items-center justify-between gap-3 relative z-10">
                   <button
                     onClick={() => onOpenBookingModal(service.title)}
                     className="text-xs font-bold text-orange-400 hover:text-amber-300 flex items-center gap-1 group/btn cursor-pointer transition-colors"
@@ -175,7 +175,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenBookingModal }) => {
                     href={getWhatsAppLink(`Hi Mahi Travels, I would like to inquire about booking: ${service.title}`)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-white text-xs font-semibold transition-all hover:scale-105 shadow-md shadow-emerald-950/30"
+                    className="flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-white text-xs font-semibold transition-all hover:scale-105 shadow-md shadow-emerald-950/30"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
                     <span>WhatsApp</span>
@@ -193,15 +193,15 @@ export const Services: React.FC<ServicesProps> = ({ onOpenBookingModal }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="mt-16 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-slate-700/80 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl relative overflow-hidden"
+          className="mt-12 sm:mt-16 p-6 sm:p-10 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-slate-700/80 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl relative overflow-hidden text-center md:text-left"
         >
-          <div className="space-y-2 text-center md:text-left relative z-10">
-            <h3 className="text-xl sm:text-2xl font-bold text-white font-['Poppins']">Need a Custom Travel Route or Multi-Day Tour?</h3>
-            <p className="text-slate-300 text-sm font-light">Send us your locations, dates, and passengers. We will organize the smoothest journey for you.</p>
+          <div className="space-y-2 relative z-10">
+            <h3 className="text-lg sm:text-2xl font-bold text-white font-['Poppins']">Need a Custom Travel Route or Multi-Day Tour?</h3>
+            <p className="text-slate-300 text-xs sm:text-sm font-light">Send us your locations, dates, and passengers. We will organize the smoothest journey for you.</p>
           </div>
           <button
             onClick={() => onOpenBookingModal('Custom Itinerary Inquiry')}
-            className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-sm shadow-xl shadow-orange-500/25 whitespace-nowrap cursor-pointer hover:scale-105 active:scale-95 transition-all relative z-10 border border-amber-300/30"
+            className="w-full md:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400 hover:from-orange-600 hover:to-amber-600 text-white font-extrabold text-xs sm:text-sm shadow-xl shadow-orange-500/25 whitespace-nowrap cursor-pointer hover:scale-105 active:scale-95 transition-all relative z-10 border border-amber-300/30"
           >
             Request Custom Plan
           </button>
