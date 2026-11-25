@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Volume2, VolumeX, Play, Pause, SkipForward, Sparkles, Film, Maximize2 } from 'lucide-react';
+import { Volume2, VolumeX, Play, Pause, SkipForward, Film, Maximize2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { BrandLogo } from './BrandLogo';
 
 interface IntroVideoProps {
   isOpen: boolean;
@@ -125,10 +126,10 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ isOpen, onClose }) => {
         >
           {/* Full Screen Edge-to-Edge Video Element with Ambient Blur for Mobile */}
           <div className="absolute inset-0 w-full h-full bg-black flex items-center justify-center overflow-hidden">
-            {/* Ambient Blurred Video Background for Mobile Pillarboxing */}
+            {/* Ambient Blurred Video Background for Pillarboxing / Letterboxing */}
             <video
               src="/intro.mp4"
-              className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none sm:hidden"
+              className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none"
               autoPlay
               playsInline
               muted
@@ -139,7 +140,7 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ isOpen, onClose }) => {
             <video
               ref={videoRef}
               src="/intro.mp4"
-              className="relative z-10 w-full h-full max-h-[100dvh] max-w-full object-contain sm:object-cover cursor-pointer"
+              className="relative z-10 w-full h-full max-h-[100dvh] max-w-full object-contain cursor-pointer"
               autoPlay
               playsInline
               muted={isMuted}
@@ -160,9 +161,7 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ isOpen, onClose }) => {
           >
             {/* Brand Logo & Tag */}
             <div className="flex items-center gap-2 sm:gap-3 bg-slate-900/90 border border-slate-700/70 backdrop-blur-md px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-2xl">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-orange-500 to-amber-500 flex items-center justify-center text-white shadow-md flex-shrink-0">
-                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 animate-pulse text-amber-200" />
-              </div>
+              <BrandLogo size="xs" />
               <div className="leading-tight">
                 <h4 className="text-[11px] sm:text-sm font-extrabold text-white tracking-wide uppercase font-['Poppins']">
                   Mahi Travels

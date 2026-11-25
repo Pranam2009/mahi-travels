@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { X, MessageCircle, Phone, Navigation, Car, Calendar, MapPin, Users } from 'lucide-react';
+import { X, MessageCircle, Phone } from 'lucide-react';
 import { BUSINESS_INFO } from '../types';
 import { getWhatsAppLink, getCallLink } from '../data';
+import { BrandLogo } from './BrandLogo';
 
 interface QuickBookingModalProps {
   isOpen: boolean;
@@ -47,17 +48,19 @@ Date & Time: ${date || 'Immediate / Flexible'}`;
         </button>
 
         {/* Modal Header */}
-        <div className="space-y-1 pr-6">
-          <div className="inline-flex items-center gap-2 text-xs font-semibold text-orange-400 uppercase tracking-wider">
-            <Car className="w-3.5 h-3.5" />
-            <span>Mahi Travels Instant Booking</span>
+        <div className="flex items-center gap-3.5 pr-8">
+          <BrandLogo size="sm" />
+          <div className="space-y-0.5">
+            <span className="text-[11px] font-semibold text-orange-400 uppercase tracking-wider block">
+              Mahi Travels Instant Booking
+            </span>
+            <h3 className="text-xl sm:text-2xl font-bold text-white font-['Poppins']">
+              Book Your Ride
+            </h3>
+            <p className="text-slate-300 text-xs sm:text-sm">
+              Instant booking via WhatsApp or Call with Mahi Travels
+            </p>
           </div>
-          <h3 className="text-xl sm:text-2xl font-bold text-white font-['Poppins']">
-            Book Your Ride
-          </h3>
-          <p className="text-slate-300 text-xs sm:text-sm">
-            Instant booking via WhatsApp or Call with Mahi Travels
-          </p>
         </div>
 
         {/* Input Fields */}

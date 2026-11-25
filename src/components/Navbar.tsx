@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, MessageCircle, Menu, X, Car, Navigation, Play } from 'lucide-react';
+import { Phone, MessageCircle, Menu, X, Navigation, Play } from 'lucide-react';
 import { BUSINESS_INFO } from '../types';
 import { getWhatsAppLink, getCallLink } from '../data';
+import { BrandLogo } from './BrandLogo';
 
 interface NavbarProps {
   onOpenBookingModal: (serviceTitle?: string) => void;
@@ -45,9 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal, onOpenIntro 
           
           {/* Logo & Brand Name */}
           <a href="#home" className="flex items-center gap-2.5 sm:gap-3 group">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white shadow-lg shadow-orange-500/20 group-hover:scale-105 transition-transform flex-shrink-0">
-              <Car className="w-4 h-4 sm:w-5 sm:h-5" />
-            </div>
+            <BrandLogo size="md" className="group-hover:scale-105 transition-transform" />
             <div>
               <span className="text-lg sm:text-xl font-bold tracking-tight text-white block leading-tight font-['Poppins']">
                 Mahi Travels

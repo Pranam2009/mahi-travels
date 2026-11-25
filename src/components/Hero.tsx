@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { MessageCircle, Phone, Instagram, ShieldCheck, MapPin, Star, Play, Award, Sparkles, CheckCircle2, Clock, Car } from 'lucide-react';
+import { MessageCircle, Phone, ShieldCheck, MapPin, Star, Play, Sparkles, Clock } from 'lucide-react';
 import { BUSINESS_INFO } from '../types';
 import { getWhatsAppLink, getCallLink } from '../data';
+import { BrandLogo } from './BrandLogo';
 
 interface HeroProps {
   onOpenBookingModal: () => void;
@@ -171,9 +172,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBookingModal, onOpenIntro }) =
               
               <div className="flex items-center justify-between border-b border-slate-800 pb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center shadow-lg shadow-orange-500/20">
-                    <Car className="w-6 h-6 text-white" />
-                  </div>
+                  <BrandLogo size="sm" />
                   <div>
                     <h3 className="text-base font-extrabold text-white font-['Poppins']">Mahi Travels</h3>
                     <p className="text-xs text-orange-400 font-medium">Mangalore Taxi Service</p>

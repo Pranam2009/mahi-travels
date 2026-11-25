@@ -1,7 +1,8 @@
 import React from 'react';
-import { Car, Phone, MessageCircle, MapPin, Instagram, Facebook, Globe, Navigation } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Instagram, Facebook, Globe } from 'lucide-react';
 import { BUSINESS_INFO } from '../types';
 import { getWhatsAppLink, getCallLink } from '../data';
+import { BrandLogo } from './BrandLogo';
 
 interface FooterProps {
   onOpenSEOModal: () => void;
@@ -27,10 +28,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenSEOModal }) => {
           
           {/* Brand Info (4 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <a href="#home" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white shadow-lg shadow-orange-500/20">
-                <Car className="w-5 h-5" />
-              </div>
+            <a href="#home" className="inline-flex items-center gap-3 group">
+              <BrandLogo size="lg" className="group-hover:scale-105 transition-transform" />
               <div>
                 <span className="text-xl font-bold tracking-tight text-white block leading-tight font-['Poppins']">
                   Mahi Travels

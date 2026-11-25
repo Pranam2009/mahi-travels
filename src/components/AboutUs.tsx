@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ShieldCheck, UserCheck, Sparkles, Clock, HeartHandshake, MapPin, Award, CheckCircle2, Car, Compass, Navigation } from 'lucide-react';
+import { UserCheck, Clock, MapPin, Award, CheckCircle2, Navigation } from 'lucide-react';
 import { BUSINESS_INFO } from '../types';
+import { BrandLogo } from './BrandLogo';
 
 export const AboutUs: React.FC = () => {
   const highlights = [
@@ -82,14 +83,12 @@ export const AboutUs: React.FC = () => {
                   
                   {/* Glowing Animated Crest Badge */}
                   <motion.div
-                    whileHover={{ scale: 1.08, rotate: 3 }}
-                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-tr from-orange-500 via-amber-500 to-yellow-400 p-1 shadow-2xl shadow-orange-500/30 relative"
+                    whileHover={{ scale: 1.06 }}
+                    className="rounded-2xl bg-gradient-to-tr from-orange-500 via-amber-500 to-red-500 p-1 shadow-2xl shadow-orange-500/30 relative"
                   >
-                    <div className="w-full h-full rounded-full bg-slate-950 flex flex-col items-center justify-center border border-slate-800">
-                      <Car className="w-8 h-8 sm:w-10 sm:h-10 text-amber-400" />
-                    </div>
+                    <BrandLogo size="xl" />
                     {/* Glowing pulse ring */}
-                    <div className="absolute inset-0 rounded-full bg-orange-500/20 animate-ping -z-10" />
+                    <div className="absolute inset-0 rounded-2xl bg-orange-500/20 animate-ping -z-10" />
                   </motion.div>
 
                   <div className="space-y-1">

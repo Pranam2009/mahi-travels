@@ -7,12 +7,11 @@ import {
   Instagram,
   Facebook,
   Send,
-  Navigation,
-  Clock,
-  Car
+  Navigation
 } from 'lucide-react';
 import { BUSINESS_INFO } from '../types';
 import { getWhatsAppLink, getCallLink } from '../data';
+import { BrandLogo } from './BrandLogo';
 
 export const ContactSection: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -194,12 +193,12 @@ Passengers: ${formState.passengers}`;
             
             {/* Direct Ride Inquiry Generator */}
             <div className="p-5 sm:p-8 rounded-3xl glass-card border border-slate-800 space-y-6 shadow-2xl">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+              <div className="flex items-center justify-between gap-3 border-b border-slate-800 pb-4">
                 <div>
                   <h3 className="text-lg sm:text-xl font-bold text-white font-['Poppins']">Quick WhatsApp Booking Form</h3>
                   <p className="text-xs text-slate-400 mt-1">Fill this brief form to instantly send formatted trip details to Mahi Travels</p>
                 </div>
-                <Car className="w-6 h-6 text-orange-400 flex-shrink-0" />
+                <BrandLogo size="sm" />
               </div>
 
               <form onSubmit={handleSendWhatsApp} className="space-y-4">
